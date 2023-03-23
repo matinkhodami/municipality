@@ -1,0 +1,43 @@
+@import 'nav' ;
+@import 'head' ;
+@import 'scroll' ;
+@import 'cardStyle' ;
+@import 'Event' ;
+@import 'navigation' ;
+@import 'footer' ;
+
+// Swiper Import
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import 'swiper/css/navigation';
+
+
+// Colors
+:root {
+      --bgDark : #011627 ; //Rich Black 
+      --bgLight : #F7ECE1 ; //Linen
+      --light: #fff ; //White
+      --lowDark : #4C5B5C ; //Feldgrau
+      --itemG : #62A87C ; //Mint
+      --itemGDark : #45B69C ; //Keppel
+      // Marker
+      --markGreen : #157145 ; 
+      --markRed : #C3423F ;
+      --markPurpule : #783F8E ;
+      --markYellow : #DEA54B ;
+      --markBlue : #065A82 ;
+}
+
+@font-face {
+      font-family: 'IranSans';
+      src: url('./Font/IRANSansWeb.ttf') ;
+}
+* {
+      margin: 0;
+      padding: 0;
+      transition: 500ms;
+      border: none ;
+      outline: none ;
+      font-family: 'IranSans';
+      font-weight: 300;
+}

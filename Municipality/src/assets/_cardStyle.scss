@@ -1,0 +1,72 @@
+figure {
+      width: 250px;
+      display: grid;
+      border-radius: 1rem;
+      overflow: hidden;
+      cursor: pointer;
+      &  figcaption {
+            display: grid;
+            align-items: end;
+            font-size: 1rem;
+            font-weight:900;
+            color: #0000;
+            padding: 1.5rem;
+            background: var(--c,#0009);
+            clip-path: inset(0 var(--_i,100%) 0 0);
+      }
+      & > * {
+            grid-area: 1/1;
+            transition: .4s;
+      }
+      & > h5 {
+            color: #000;
+            text-align: right;
+            z-index: 999;
+            font-weight: 300;
+            margin: 10px  10px  ;
+      }
+      &  ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            & > li {
+                  font-size: 1rem;
+                  color: #fff;
+                  &:hover {
+                        &  {
+                              font-size: 1.2rem;
+                        }
+                  }
+            }
+      }
+      &:hover {
+            & figcaption{
+                  --_i: 0%;
+            }
+            &  img {
+                  transform: scale(1.2);
+            }
+            & h5 {
+                  color: #fff;
+            }
+      }
+}
+@supports not (-webkit-mask-clip: text) {
+      figure figcaption {
+            -webkit-mask: none;
+            color: #fff;
+      }
+}
+@media only screen and (max-width: 600px){
+      figure {
+            & figcaption{
+                  --_i: 0%;
+            }
+            &  img {
+                  transform: scale(1.2);
+            }
+            & h5 {
+                  color: #fff;
+            }
+      }
+}

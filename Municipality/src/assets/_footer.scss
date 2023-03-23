@@ -1,0 +1,79 @@
+.footer {
+      width: 100%;
+      height: fit-content;
+      display: grid;
+      grid-template-columns: 1fr;
+      & > div {
+            padding-inline: 20px;
+            padding-top: 32px;
+            padding-bottom: 16px;
+            background: #272727;
+            color: white;
+      }
+      &-title { 
+            text-align: right;
+            padding: 5px;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #69B578;
+      }
+      &-item {
+            & ul {
+                  list-style: none;
+                  text-align: right;
+                  & li {
+                        margin-bottom: 7px;
+                  }
+            }
+            &-first {
+                  & li:hover {
+                        cursor: pointer;
+                        color:#3BB273 ; 
+                  }
+            }
+            &-second {
+                  & span {
+                        display: block;
+                  }
+                  & i {
+                        margin-left: 5px;
+                        color: #3BB273;
+                  }
+            }
+      }
+      &-up {
+            transform: translateY(35px);
+            background: url('./Image/wp6738561-city-ps4-minimalist-wallpapers.png');
+            &-title {
+                  margin-bottom: 10px;
+                  position: relative;
+                  &::before {
+                        position: absolute;
+                        content: "";
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -10px;
+                        width: 50px;
+                        height: 3px;
+                        background: #3BB273;
+                        display: block;
+                  }
+            }
+      }
+}
+@media screen and (min-width: 620px)  {
+      .footer {
+            grid-template-columns: 1fr 1fr ;
+      }
+}
+@media screen and ( min-width : 900px) {
+      .footer {
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+      }
+}
+.under-footer {
+      padding-block: 5px;
+      text-align: center;
+      background: #3BB273;
+      color: #fff;
+      font-weight: 300;
+}

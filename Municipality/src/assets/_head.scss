@@ -1,0 +1,52 @@
+.head {
+      position: relative;
+      overflow: hidden;
+      &-item {
+            display: none;
+            cursor: pointer;
+            border-radius: 50px ;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 30px;
+            position: absolute;
+            color: white;
+            width: 300px;
+            height: 70px;
+            padding-block: 10px;
+            z-index: 10000;
+            right: -225px;
+            background: black;
+            &:hover {
+                  right: 0;
+            }
+            &:nth-child(2) {
+                  top: 30px;
+            }
+            &:nth-child(3) {
+                  top: 105px;
+            }
+            &:nth-child(4) {
+                  top: 180px;
+            }
+            & > div {
+                  display: flex;
+                  flex-direction: column;
+                  text-align: right;
+            }
+            &-icon {
+                  background: white;
+                  text-align: center;
+                  line-height: 70px;
+                  border-radius: 50% ;
+                  color: black;
+                  width: 70px;
+                  height: 70px;
+            }
+      }
+}
+@media ( min-width : 720px ) {
+      .head-item {
+            display: flex;
+      }
+}
